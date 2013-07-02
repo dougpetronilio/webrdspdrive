@@ -7,7 +7,11 @@ class WelcomeController < ApplicationController
     email = params["email"]
     password = params["password"]
     session[:integrator] = RdsPdrive::Integrator.new(email, password)
-    redirect_to :controller => "lead", :action => "list"
+    if session[:integrator].token
+      redirect_to :controller => "lead", :action => "list"
+    else
+      redirect_to :action => "index"
+    end
   end
   
   def logoff
