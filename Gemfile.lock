@@ -79,7 +79,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    rds_pdrive (0.0.2)
+    rds_pdrive (0.0.3)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
