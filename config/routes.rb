@@ -4,6 +4,7 @@ Webrdspdrive::Application.routes.draw do
   get "lead/create"
 
   get "welcome/index"
+  post "welcome/login"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
