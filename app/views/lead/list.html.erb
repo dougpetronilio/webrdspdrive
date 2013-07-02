@@ -4,9 +4,29 @@
 <%= link_to "sair", :controller => "welcome", :action => "logoff"%><br>
 
 <br>
+<table>
+	<caption>Leads do usuário</caption>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Email</th>
+			<th>Empresa</th>
+			<th>Telefone</th>
+		</tr>
+	</thead>
+<% if session[:integrator] && session[:integrator].get_all_leads %>
+	<% session[:integrator].get_all_leads.each do |lead| %>
+		<tbody>
+			<tr>
+				<td><%= lead.name %></td>
+				<td><%= lead.email %></td>
+				<td><%= lead.company %></td>
+				<td><%= lead.phone %></td>
+			</tr>
+		</tbody>
+	<% end %>
+<% end%>
+</table>
 
-<%= session[:integrator].get_all_leads.each do |lead| %>
-	Nome: <%= lead.name %>
-	Email: <%= lead.email %><br>
-<% end %>
-
+<br>
+<%= link_to "Novo Lead", :action => "create" %>

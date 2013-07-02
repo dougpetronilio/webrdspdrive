@@ -1,2 +1,28 @@
 <h1>Lead#create</h1>
 <p>Find me in app/views/lead/create.html.erb</p>
+
+<%= form_tag(:action => "save") do %>
+	<div>
+		<%= label_tag "name:"%>
+		<%= text_field_tag "name"%>
+	</div>
+	<div>
+		<%= label_tag "last name:"%>
+		<%= text_field_tag "last_name"%>
+	</div>
+	<div>
+		<%= label_tag "email:"%>
+		<%= text_field_tag "email"%>
+	</div>
+	<div>
+		<%= label_tag "company:"%>
+		<%= text_field_tag "company"%>
+	</div>
+	<div>
+		<%= label_tag "phone:"%>
+		<%= password_field_tag "phone"%>
+	</div>
+	<div>
+		<%= submit_tag "Save" %>
+	</div>
+<% end -%>

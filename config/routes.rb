@@ -1,7 +1,8 @@
 Webrdspdrive::Application.routes.draw do
   get "lead/list"
-
+  post "lead/save"
   get "lead/create"
+
 
   get "welcome/index"
   post "welcome/login"
