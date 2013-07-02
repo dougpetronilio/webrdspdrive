@@ -1,2 +1,12 @@
 <h1>Lead#list</h1>
 <p>Find me in app/views/lead/list.html.erb</p>
+<%= session[:integrator].token %> <br>
+<%= link_to "sair", :controller => "welcome", :action => "logoff"%><br>
+
+<br>
+
+<%= session[:integrator].get_all_leads.each do |lead| %>
+	Nome: <%= lead.name %>
+	Email: <%= lead.email %><br>
+<% end %>
+
